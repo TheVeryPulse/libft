@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:40:23 by juli              #+#    #+#             */
-/*   Updated: 2023/11/17 16:01:42 by juli             ###   ########.fr       */
+/*   Updated: 2023/11/18 00:57:59 by Philip Li        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 #define INT_MAX_LEN (40)
 #define DEC_BASE (10)
-
-int	ft_abs(int n);
 
 char	*ft_itoa(int n)
 {
@@ -43,13 +41,6 @@ char	*ft_itoa(int n)
 	return (ft_strdup(&s[i]));
 }
 
-int	ft_abs(int n)
-{
-	if (n > 0)
-		return (n);
-	else
-		return (-n);
-}
 /*
 #include <stdio.h>
 #include <limits.h>
