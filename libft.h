@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:03:04 by juli              #+#    #+#             */
-/*   Updated: 2023/11/08 17:07:24 by juli             ###   ########.fr       */
+/*   Updated: 2023/11/18 00:30:23 by Philip Li        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdarg.h>
 
 /* basic functions */
 
@@ -111,5 +112,25 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/* ft_printf */
+
+int		ft_printf(const char *str, ...);
+
+int		ft_printf_all(va_list args, int str_i);
+
+int		ft_printf_c(char c);
+
+int		ft_printf_s(char *s);
+
+int		ft_printf_p(void *p);
+
+int		ft_printf_d(int n);
+
+int		ft_printf_u(unsigned int n);
+
+int		ft_printf_x(unsigned int n, int letter_case);
+
+int		ft_abs(int n);
 
 #endif
