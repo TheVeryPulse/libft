@@ -67,9 +67,6 @@ all: $(NAME)
 $(NAME): $(OFILES_LIBFT) $(OFILES_PRINTF)
 	ar rcs $@ $^
 
-$(OFILES_PRINTF): $(CFILES_PRINTF)
-	$(CC) $(CFLAGS) -c $^
-
 # remove all .o files
 clean:
 	rm -f $(OFILES_LIBFT) $(OFILES_PRINTF)
