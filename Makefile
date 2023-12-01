@@ -56,20 +56,29 @@ CFILES_PRINTF := \
 	ft_printf_x.c \
 	ft_abs.c
 
+CFILES_GNL := \
+	get_next_line.c \
+	get_next_line_utils.c \
+
 OFILES_LIBFT := $(CFILES_LIBFT:.c=.o)
 OFILES_PRINTF := $(CFILES_PRINTF:.c=.o)
+OFILES_GNL := $(CFILES_GNL:.c=.o)
 NAME := libft.a
 
 # build object files and archive the static library
 all: $(NAME)
 
 # build the library with the required .o files
-$(NAME): $(OFILES_LIBFT) $(OFILES_PRINTF)
+$(NAME): $(OFILES_LIBFT) $(OFILES_PRINTF) $(OFILES_GNL)
 	ar rcs $@ $^
+
+# build .o files from .c files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 # remove all .o files
 clean:
-	rm -f $(OFILES_LIBFT) $(OFILES_PRINTF)
+	rm -f *.o
 
 # remove static library as well as all .o files
 fclean: clean
