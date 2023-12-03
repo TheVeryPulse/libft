@@ -6,7 +6,7 @@
 /*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:03:04 by juli              #+#    #+#             */
-/*   Updated: 2023/11/18 00:30:23 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/03 16:43:58 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,15 +156,6 @@ typedef struct s_str_list
 
 char	*get_next_line(int fd);
 
-char	*ft_strchr(const char *s, int c);
-
-int		_total_strlen_from_list(t_str_list *list);
-
-void	_free_and_set_to_null(t_str_list **list, char **buffer);
-
-void	_read_until_eol_or_eof_and_save_excess(int fd, char *tmp_buffer,
-			t_str_list **head, char **fd_buffer);
-
 void	_cut_line_into_buffer(char *fd_buffer, char *tmp_buffer);
 
 void	_save_to_fd_buffer(char **fd_buffer, char *source);
@@ -172,5 +163,12 @@ void	_save_to_fd_buffer(char **fd_buffer, char *source);
 void	_add_until_eol_to_list(t_str_list **head, char *buffer);
 
 char	*_list_to_line(t_str_list *list);
+
+int		_total_strlen_from_list(t_str_list *list);
+
+void	_free_and_set_to_null(t_str_list **list, char **buffer);
+
+void	_read_until_eol_or_eof_and_save_excess(int fd, char *tmp_buffer,
+			t_str_list **head, char **fd_buffer);
 
 #endif

@@ -6,27 +6,11 @@
 /*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 01:23:06 by juli              #+#    #+#             */
-/*   Updated: 2023/11/30 15:35:06 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/03 15:54:03 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* Returns a pointer to the first occurence of character (c) in the string (s).
-
-   Return NULL if character (c) is not found */
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
-}
 
 /* Attempts to free each node of the entire list and the provided buffer.
    Then resets the pointer to NULL after.

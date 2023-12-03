@@ -6,23 +6,15 @@
 /*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:33:34 by juli              #+#    #+#             */
-/*   Updated: 2023/11/05 18:29:23 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/03 16:37:51 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* last tested on 05/11/2023 */
+#include "libft.h"
 
-/*	LOG
+/* Returns a pointer to the first occurence of character (c) in the string (s).
 
-	05/11/2023
-	Bug fix: handle overflow -> int c as char
-
-	04/11/2023
-	Bug fix: return terminator if looking for '\0'
-*/
-
-#include <stdio.h>
-
+   Return NULL if character (c) is not found */
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
