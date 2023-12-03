@@ -6,23 +6,26 @@
 /*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:09:09 by juli              #+#    #+#             */
-/*   Updated: 2023/11/04 20:25:33 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/03 18:40:42 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* last tested on 04/11/2023 */
-
 #include "libft.h"
 
+/* Searches for a short string inside a long string up to (len) characters.
+
+   Algorithm: brute force. */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
+	size_t	ltl_len;
 
 	i = 0;
 	if (*little == 0)
 		return ((char *)big);
-	while (big[i] && i < len)
+	ltl_len = ft_strlen(little);
+	while (big[i] && i <= len - ltl_len)
 	{
 		j = 0;
 		while (big[i + j] == little[j] && little[j] && big[i + j]
