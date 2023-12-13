@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 01:08:18 by Philip Li         #+#    #+#             */
-/*   Updated: 2023/11/08 01:08:18 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/13 15:32:12 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include <stdlib.h>
 
 /*	Parameters
 	lst: The address of a pointer to a node.
@@ -22,10 +25,6 @@
 	function 'del' and free().Finally, the pointer 	to the list must be set to 
 	NULL.
 */
-
-#include "libft.h"
-#include <stdlib.h>
-
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current;

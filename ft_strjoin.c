@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:57:25 by juli              #+#    #+#             */
-/*   Updated: 2023/11/03 16:57:35 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 15:48:42 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -36,13 +35,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joined[i] = '\0';
 	return (joined);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char *str0 = "str0";
-	char *str1 = "str1";
-	printf("%s\n", ft_strjoin(str0, str1));
-}
-*/

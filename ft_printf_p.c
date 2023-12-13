@@ -3,24 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_p.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:20:22 by juli              #+#    #+#             */
-/*   Updated: 2023/11/18 00:32:49 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/13 16:11:19 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Prints the address of a pointer to terminal in hexadecimal.
- * Returns the length of the printed string.
- */
-
-#include <unistd.h>
 #include <stdint.h>
 #include "libft.h"
 
 #define HEXA_BASE (16)
 #define ADDR_MAX_LEN (20)
 
+/* Prints the address of a pointer to terminal in hexadecimal.
+ * Returns the length of the printed string.
+ */
 int	ft_printf_p(void *p)
 {
 	int			i;

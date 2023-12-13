@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:40:23 by juli              #+#    #+#             */
-/*   Updated: 2023/11/18 00:57:59 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/13 15:31:26 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* tested: 03/11/2023 */
-
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 #include <stdbool.h>
 
 #define INT_MAX_LEN (40)
@@ -40,19 +38,3 @@ char	*ft_itoa(int n)
 		s[--i] = '-';
 	return (ft_strdup(&s[i]));
 }
-
-/*
-#include <stdio.h>
-#include <limits.h>
-
-int	main(void)
-{
-	int num = 50000;
-	printf("%d (int)\n%s (char[])\n", num, ft_itoa(num));
-	num = INT_MIN;
-	printf("%d (int)\n%s (char[])\n", num, ft_itoa(num));
-	num = INT_MAX;
-	printf("%d (int)\n%s (char[])\n", num, ft_itoa(num));
-	return (0);
-}
-*/

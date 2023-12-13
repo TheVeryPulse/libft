@@ -3,24 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:27:11 by juli              #+#    #+#             */
-/*   Updated: 2023/11/05 16:27:13 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 15:58:42 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	Allocates (with malloc(3)) and returns a substring from the string 's'.
-	The substring begins at index 'start' and is of maximum size 'len'.*/
-
-/*	06/11/2023
-	return an empty string when any parameter is incorrect inpust
-*/
-
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
+/*	Allocates (with malloc(3)) and returns a substring from the string 's'.
+	The substring begins at index 'start' and is of maximum size 'len'.*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*newstr;
@@ -44,14 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	newstr[i] = '\0';
 	return (newstr);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char *s = "0123456789";
-	unsigned int start = 1;
-	size_t len = 1;
-	printf("%s\n", ft_substr(s, start, len));
-}
-*/

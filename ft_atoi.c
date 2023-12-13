@@ -3,47 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:42:04 by juli              #+#    #+#             */
-/*   Updated: 2023/11/04 20:42:11 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 15:13:42 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* last tested on 05/11/2023 */
+#include "libft.h"
+#define POSITIVE (+1)
+#define NEGATIVE (-1)
+#define BASE_TEN (10)
+
+static int	num(char c);
 
 int	ft_atoi(const char *nptr)
 {
 	int	i;
-	int	result;
 	int	sign;
+	int	result;
 
 	i = 0;
+	sign = POSITIVE;
 	result = 0;
-	sign = 1;
-	while ((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' ')
+	while (ft_isspace(nptr[i]))
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (nptr[i] == '-')
 	{
-		if (nptr[i] == '-')
-			sign = -1;
+		sign = NEGATIVE;
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	else if (nptr[i] == '+')
 	{
-		result = result * 10 + nptr[i] - '0';
+		i++;
+	}
+	while (ft_isdigit(nptr[i]))
+	{
+		result = result * BASE_TEN + num(nptr[i]);
 		i++;
 	}
 	return (result * sign);
 }
-/*
-#include <stdlib.h>
-#include <stdio.h>
 
-int	main(void)
+static int	num(char c)
 {
-	char *str = "2147483648";
-	printf("%d\n", atoi(str));
-	printf("%d\n", ft_atoi(str));
+	if (ft_isdigit(c))
+		return (c - '0');
+	else
+		return (c);
 }
-*/

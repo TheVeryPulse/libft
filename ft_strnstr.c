@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:09:09 by juli              #+#    #+#             */
-/*   Updated: 2023/12/03 18:40:42 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 15:56:25 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,25 +37,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <bsd/string.h>
-
-int	main(void)
-{
-	const char *big = "abcdefghi";
-	const char *little = "def";
-	int len = 4;
-
-	char *my_val = ft_strnstr(big, little, len);
-	char *c_val = strnstr(big, little, len);
-
-	printf
-	(
-		"big:       {%s}\n"
-		"little:    {%s}\n\n", big, little
-	);
-	printf("Should be: {%s}\n", c_val);
-	printf("is now:    {%s}\n", my_val);
-}
-*/

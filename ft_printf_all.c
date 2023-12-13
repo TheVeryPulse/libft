@@ -3,22 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_all.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 21:25:19 by juli              #+#    #+#             */
-/*   Updated: 2023/11/18 00:32:35 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/13 15:35:41 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include <stdarg.h>
 
 /* Interprets the specifier passed into ft_printf.
  * Calls the corresponding function to print the argument.
  * Returns the length of the printed string.
  * Returns -1 if the specifier is not valid.
 */
-
-#include "libft.h"
-#include <stdarg.h>
-
 int	ft_printf_all(va_list args, int str_i)
 {
 	int	sum;

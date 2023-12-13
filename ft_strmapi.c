@@ -3,16 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 19:54:22 by juli              #+#    #+#             */
-/*   Updated: 2023/11/04 01:01:30 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 16:10:54 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
+/*
+ * Applies a given function 'f' to each character of the input 
+ * string 's'.
+ * Each character is passed by its index as the first argument to 'f'.
+ * A new string is created, where each character is the result of the function 
+ * 'f'.
+ * 
+ * If the input string 's' is NULL, the function returns NULL.
+ * If memory allocation for the new string fails, the function also returns NULL.
+ * The new string is null-terminated and returned by the function.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
@@ -32,21 +42,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	newstr[i] = '\0';
 	return (newstr);
 }
-/*
-#include <stdio.h>
-
-char my_func(unsigned int i, char str)
-{
-	printf("My inner function: index = %d and %c\n", i, str);
-	return (str - 32);
-}
-
-int main()
-{
-	char str[10] = "hello";
-	printf("The result is %s\n", str);
-	char *result = ft_strmapi(str, my_func);
-	printf("The result is %s\n", result);
-	return 0;
-}
-*/

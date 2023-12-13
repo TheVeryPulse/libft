@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:05:21 by juli              #+#    #+#             */
-/*   Updated: 2023/11/04 10:31:04 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 15:36:57 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Outputs the string 's' to the given file descriptor. */
-
-/* tested on 04/11/2023 */
-
 #include <unistd.h>
 
+/* Outputs the string 's' to the given file descriptor. */
 void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	len;
@@ -25,12 +22,3 @@ void	ft_putstr_fd(char *s, int fd)
 		len++;
 	write(fd, s, len);
 }
-/*
-int	main(void)
-{
-	int screen = 1;
-	int error = 2;
-	ft_putstr_fd("screen\n", screen);
-	ft_putstr_fd("error\n", error);
-}
-*/

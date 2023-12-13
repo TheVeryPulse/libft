@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:03:04 by juli              #+#    #+#             */
-/*   Updated: 2023/12/03 16:43:58 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 16:04:49 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
+# define ASCII_LU_DIFF (32)
 
 /* basic functions */
 
@@ -27,7 +29,13 @@ int		ft_isalnum(int c);
 
 int		ft_isascii(int c);
 
+int		ft_isspace(int c);
+
 int		ft_isprint(int c);
+
+int		ft_isupper(int c);
+
+int		ft_islower(int c);
 
 size_t	ft_strlen(const char *s);
 

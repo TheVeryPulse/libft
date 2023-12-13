@@ -3,24 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:15:25 by juli              #+#    #+#             */
-/*   Updated: 2023/11/18 00:32:45 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/13 16:11:31 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Prints an integer to terminal, return string length.
- */
-
-#include <unistd.h>
-#include <stddef.h>
-#include <stdbool.h>
 #include "libft.h"
 
 #define DEC_BASE (10)
 #define DEC_MAX_LEN (16)
 
+/* Prints an integer to terminal, return string length.
+ */
 int	ft_printf_d(int n)
 {
 	int			i;

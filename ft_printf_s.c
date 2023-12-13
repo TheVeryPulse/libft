@@ -3,25 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_s.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:12:12 by juli              #+#    #+#             */
-/*   Updated: 2023/11/18 00:32:50 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/13 16:06:45 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Prints a string to terminal, returns string length.
- */
-
-/* LOG
- *
- * 17/11/2023
- * Bug fix: in case of NULL pointer, writes "(null)".
- */
-#include <unistd.h>
-#include <limits.h>
 #include "libft.h"
 
+/* Prints a string to terminal, returns string length.
+ */
 int	ft_printf_s(char *s)
 {
 	int	len;

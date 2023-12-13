@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 10:26:30 by juli              #+#    #+#             */
-/*   Updated: 2023/12/13 15:37:20 by juli             ###   ########.fr       */
+/*   Created: 2023/12/13 15:00:17 by juli              #+#    #+#             */
+/*   Updated: 2023/12/13 15:11:41 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-/* Outputs the string 's' to the given file descriptor followed by a newline */
-void	ft_putendl_fd(char *s, int fd)
+int	ft_isspace(int c)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	write(fd, s, len);
-	write(fd, "\n", 1);
+	return ((c >= '\t' && c <= '\r') || c == ' ');
 }

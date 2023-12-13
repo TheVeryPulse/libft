@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:44:26 by juli              #+#    #+#             */
-/*   Updated: 2023/11/07 15:44:28 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 15:33:28 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*	Parameters
 	lst: The beginning of the list.
@@ -19,9 +21,6 @@
 	Description
 	Counts the number of nodes in a list.
 */
-
-#include "libft.h"
-
 int	ft_lstsize(t_list *lst)
 {
 	int	len;

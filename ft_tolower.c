@@ -3,28 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:24:11 by juli              #+#    #+#             */
-/*   Updated: 2023/11/04 19:35:54 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 16:03:38 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* last tested on 04/11/2023 */
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
+	if (ft_isupper(c))
+		return (c + ASCII_LU_DIFF);
 	else
 		return (c);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	for (int i = 'A'; i <= 'Z' + 2; i++)
-		printf("%c to lower: %c\n", i, ft_tolower(i));
-}
-*/

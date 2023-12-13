@@ -3,28 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:27:27 by juli              #+#    #+#             */
-/*   Updated: 2023/11/04 19:33:25 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 16:05:26 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* last tested on 04/11/2023 */
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
+	if (ft_islower(c))
+		return (c - ASCII_LU_DIFF);
 	else
 		return (c);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	for (int i = 'a'; i <= 'z'; i++)
-		printf("%c to upper: %c\n", i, ft_toupper(i));
-}
-*/

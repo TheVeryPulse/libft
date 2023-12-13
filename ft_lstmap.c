@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:42:53 by juli              #+#    #+#             */
-/*   Updated: 2023/11/08 18:05:09 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 15:33:03 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*	Parameters
 	lst: The address of a pointer to a node.
@@ -28,15 +30,6 @@
 	function 'f'. The 'del' function is used to delete the content of a node if
 	needed.
 */
-
-/*	08/11/2023
-	Bug fix
-	- return NULL if any of the input is NULL
-	- clear the space if the target string cannot be built, and return NULL
-*/
-
-#include "libft.h"
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;

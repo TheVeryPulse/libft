@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:33:50 by juli              #+#    #+#             */
-/*   Updated: 2023/11/08 18:07:47 by juli             ###   ########.fr       */
+/*   Updated: 2023/12/13 15:32:36 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*	Parameters
 	lst: The address of a pointer to a node.
@@ -18,9 +20,6 @@
 	Iterates the list 'lst' and applies the function 'f' on the content of each 
 	node.
 */
-
-#include "libft.h"
-
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)

@@ -3,12 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_x.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 18:05:56 by juli              #+#    #+#             */
-/*   Updated: 2023/11/18 00:32:54 by Philip Li        ###   ########.fr       */
+/*   Updated: 2023/12/13 16:12:08 by juli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+#define HEXA_MAX_LEN (9)
+#define HEXA_BASE (16)
+
+static void	str_upper(char *s);
 
 /* Prints integer as hexadecimal to terminal.
  * Does not print a '-' when input is negative.
@@ -18,15 +25,6 @@
  *     i: the number to print as decimal
  *     x: 'x' for lowercase and 'X' for uppercase
  */
-
-#include <unistd.h>
-#include "libft.h"
-
-#define HEXA_MAX_LEN (9)
-#define HEXA_BASE (16)
-
-static void	str_upper(char *s);
-
 int	ft_printf_x(unsigned int n, int letter_case)
 {
 	int			i;
