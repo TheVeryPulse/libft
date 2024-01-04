@@ -75,10 +75,12 @@ all: $(NAME)
 
 # build the library with the required .o files
 $(NAME): $(OBJ_FILES)
+	@mkdir -p $(LIB_DIR)
 	ar rcs $@ $^
 
 # build .o files from .c files
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(BIN_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # remove all .o files
