@@ -22,8 +22,7 @@ static bool	is_specifier(char c);
 	• %u Prints an unsigned decimal (base 10) number.
 	• %x Prints a number in hexadecimal (base 16) lowercase format.
 	• %X Prints a number in hexadecimal (base 16) uppercase format.
-	• %% Prints a percent sign.
-*/
+	• %% Prints a percent sign. */
 int	ft_printf(const char *str, ...)
 {
 	int		i;
@@ -50,7 +49,5 @@ int	ft_printf(const char *str, ...)
 /* Check if input character is a valid specifier (cspiduxX%) */
 static bool	is_specifier(char c)
 {
-	static const char	*specifiers = "cspdiuxX%%";
-
-	return (ft_strchr(specifiers, c) != NULL);
+	return (ft_strchr("cspdiuxX%%", c) != NULL);
 }
