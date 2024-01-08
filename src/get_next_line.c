@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 19:57:59 by Philip Li         #+#    #+#             */
-/*   Updated: 2023/12/03 16:43:56 by juli             ###   ########.fr       */
+/*   Updated: 2024/01/08 18:09:08 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
 
 /* Reads a line from a file descriptor and returns the line.
 

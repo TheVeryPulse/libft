@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_s.c                                      :+:      :+:    :+:   */
+/*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 16:12:12 by juli              #+#    #+#             */
-/*   Updated: 2024/01/08 17:59:47 by Philip           ###   ########.fr       */
+/*   Created: 2024/01/08 17:54:43 by Philip            #+#    #+#             */
+/*   Updated: 2024/01/08 17:56:40 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#ifndef PRINTF_H
+# define PRINTF_H
+# include "libft.h"
 
-/* Prints a string to terminal, returns string length.
- */
-int	ft_printf_s(char *s)
-{
-	int	len;
+int		ft_printf_all(va_list args, int str_i);
+int		ft_printf_c(char c);
+int		ft_printf_s(char *s);
+int		ft_printf_p(void *p);
+int		ft_printf_d(int n);
+int		ft_printf_u(unsigned int n);
+int		ft_printf_x(unsigned int n, int letter_case);
 
-	if (s == NULL)
-	{
-		len = 6;
-		write(STDOUT_FILENO, "(null)", len);
-	}
-	else
-	{
-		len = (int)ft_strlen(s);
-		write(STDOUT_FILENO, s, len);
-	}
-	return (len);
-}
+#endif

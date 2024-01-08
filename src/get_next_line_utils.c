@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Philip Li <LJHR.UK@outlook.com>            +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 01:23:06 by juli              #+#    #+#             */
-/*   Updated: 2023/12/03 15:54:03 by juli             ###   ########.fr       */
+/*   Updated: 2024/01/08 18:09:18 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
 
 /* Attempts to free each node of the entire list and the provided buffer.
    Then resets the pointer to NULL after.

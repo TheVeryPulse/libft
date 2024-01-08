@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_all.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 21:25:19 by juli              #+#    #+#             */
-/*   Updated: 2023/12/13 15:35:41 by juli             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:59:00 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdarg.h>
+#include "printf.h"
 
 /* Interprets the specifier passed into ft_printf.
  * Calls the corresponding function to print the argument.

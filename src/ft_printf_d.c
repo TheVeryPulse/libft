@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:15:25 by juli              #+#    #+#             */
-/*   Updated: 2023/12/13 16:11:31 by juli             ###   ########.fr       */
+/*   Updated: 2024/01/08 17:59:16 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
 #define DEC_BASE (10)
 #define DEC_MAX_LEN (16)
