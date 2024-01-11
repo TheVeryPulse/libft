@@ -64,7 +64,9 @@ FILE_NAMES := \
 	ft_abs.c \
 	\
 	get_next_line.c \
-	get_next_line_utils.c
+	get_next_line_utils.c \
+	\
+	format_string.c
 SRC_FILES := $(addprefix $(SRC_DIR)/, $(FILE_NAMES))
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(BIN_DIR)/%.o, $(SRC_FILES))
 

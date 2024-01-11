@@ -3,15 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:11:46 by juli              #+#    #+#             */
-/*   Updated: 2023/12/13 15:56:30 by juli             ###   ########.fr       */
+/*   Updated: 2024/01/11 18:47:33 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief Compares up to 'n' characters bwteen string 's1' and string 's2'.
+ * 
+ * @param n Maximum number of characters to compare.
+ * @return
+ * An interger difference between the first different characters between
+ * 's1' and 's2'. Returns 0 if there is no difference up to 'n' bytes.
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

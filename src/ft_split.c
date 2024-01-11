@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:39:36 by juli              #+#    #+#             */
-/*   Updated: 2023/12/13 15:46:25 by juli             ###   ########.fr       */
+/*   Updated: 2024/01/11 14:49:08 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,19 @@ static size_t	get_str_count(char const *s, char d);
 
 static char		*extract_str(char const *s, char c);
 
+/**
+ * @brief Splits a string into an array of strings (words) using a specified
+ * delimiter character.
+ *
+ * @param s The string to be split.
+ * @param c The delimiter character.
+ * @return 
+ * A dynamically allocated array of strings. Each string is a word from the
+ * original string 's'. The array is terminated by a NULL pointer. If the
+ * allocation fails, the function returns NULL.
+ * 
+ * The memory for the array and for each word is dynamically allocated and must
+ * be freed by the caller.*/
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
