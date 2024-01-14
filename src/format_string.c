@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:51:05 by Philip            #+#    #+#             */
-/*   Updated: 2024/01/11 20:13:00 by Philip           ###   ########.fr       */
+/*   Updated: 2024/01/14 14:52:16 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,27 +77,32 @@ static void	build_format_string(char *f_str, const char *str, size_t len,
 			va_list ap)
 {
 	size_t	i;
+	size_t	j;
 
 	if (!f_str)
 		return ;
 	i = 0;
-	while (i < len)
+	j = 0;
+	while (j < len)
 	{
 		if (ft_strncmp(&str[i], "%s", 2) == 0)
-			ft_strlcpy(&f_str[i], va_arg(ap, char *), len);
+		{
+			i += 2;
+			ft_strlcpy(&f_str[j], va_arg(ap, char *), len);
+		}
 		else
-			f_str[i] = str[i];
-		while (f_str[i])
-			i++;
+			f_str[j++] = str[i++];
+		while (f_str[j])
+			j++;
 	}
-	f_str[i] = '\0';
+	f_str[j] = '\0';
 }
 
-// int	main(void)
-// {
-// 	char	*f_str;
+/* int	main(int argc, char **argv)
+{
+	char	*f_str;
 
-// 	f_str = format_string("Test: %s", "0123456789");
-// 	ft_printf("%s\n", f_str);
-// 	free(f_str);
-// }
+	f_str = format_string("%s\n", argv[2]);
+	ft_printf("%s", f_str);
+	free(f_str);
+} */
