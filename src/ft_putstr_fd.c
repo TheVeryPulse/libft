@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:05:21 by juli              #+#    #+#             */
-/*   Updated: 2023/12/13 15:36:57 by juli             ###   ########.fr       */
+/*   Updated: 2024/01/15 00:16:43 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 /* Outputs the string 's' to the given file descriptor. */
 void	ft_putstr_fd(char *s, int fd)

@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juli <juli@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:56:09 by juli              #+#    #+#             */
-/*   Updated: 2023/12/13 15:57:58 by juli             ###   ########.fr       */
+/*   Updated: 2024/01/15 00:26:18 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static bool		char_in_str(char c, const char *str);
-
 static size_t	get_new_len(char const *s1, char const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)

@@ -6,14 +6,13 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:39:36 by juli              #+#    #+#             */
-/*   Updated: 2024/01/11 14:49:08 by Philip           ###   ########.fr       */
+/*   Updated: 2024/01/15 00:38:40 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	get_str_count(char const *s, char d);
-
 static char		*extract_str(char const *s, char c);
 
 /**

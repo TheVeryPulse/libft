@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 18:42:36 by juli              #+#    #+#             */
-/*   Updated: 2024/01/11 23:24:19 by Philip           ###   ########.fr       */
+/*   Created: Invalid date        by                   #+#    #+#             */
+/*   Updated: 2024/01/15 00:37:49 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+
+#include "libft.h"
 
 /**
  * @brief
@@ -30,7 +31,6 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*ary;
-	size_t	i;
 	size_t	bsize;
 
 	if (nmemb == 0 || size == 0)
@@ -38,11 +38,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	bsize = nmemb * size;
 	if (bsize < nmemb || bsize < size)
 		return (NULL);
-	ary = (char *)malloc(bsize);
+	ary = (void *)malloc(bsize);
 	if (ary == NULL)
 		return (NULL);
-	i = 0;
-	while (i < bsize)
-		ary[i++] = 0;
-	return ((void *)ary);
+	ft_bzero(ary, bsize);
+	return (ary);
 }

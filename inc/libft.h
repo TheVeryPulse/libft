@@ -6,17 +6,18 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:03:04 by juli              #+#    #+#             */
-/*   Updated: 2024/01/11 20:11:11 by Philip           ###   ########.fr       */
+/*   Updated: 2024/01/15 00:36:23 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
 # include <stdarg.h>
+# include <stdbool.h>
+# include <stddef.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdbool.h>
 # define ASCII_LU_DIFF (32)
 
 /* basic functions */

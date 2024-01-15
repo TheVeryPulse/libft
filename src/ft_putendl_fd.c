@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:26:30 by juli              #+#    #+#             */
-/*   Updated: 2023/12/14 14:09:04 by Philip           ###   ########.fr       */
+/*   Updated: 2024/01/15 00:15:17 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,20 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	char	*to_write;
-	size_t	i;
 	size_t	len;
 
 	len = ft_strlen(s);
 	to_write = (char *)malloc(len + 1);
-	if (!to_write)
-		return ;
-	i = 0;
-	while (i < len)
+	if (to_write)
 	{
-		to_write[i] = s[i];
-		i++;
+		ft_strlcpy(to_write, s, len + 1);
+		to_write[len] = '\n';
+		write(fd, to_write, len + 1);
+		free(to_write);
 	}
-	to_write[i++] = '\n';
-	write(fd, to_write, len + 1);
-	free(to_write);
+	else
+	{
+		write(fd, s, len);
+		write(fd, "\n", 1);
+	}
 }

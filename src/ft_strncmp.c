@@ -6,11 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:11:46 by juli              #+#    #+#             */
-/*   Updated: 2024/01/11 18:47:33 by Philip           ###   ########.fr       */
+/*   Updated: 2024/01/15 00:39:52 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /**
  * @brief Compares up to 'n' characters bwteen string 's1' and string 's2'.

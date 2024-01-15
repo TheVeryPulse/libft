@@ -6,11 +6,10 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:20:22 by juli              #+#    #+#             */
-/*   Updated: 2024/01/08 17:59:39 by Philip           ###   ########.fr       */
+/*   Updated: 2024/01/15 00:11:00 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
 #include "printf.h"
 
 #define HEXA_BASE (16)
