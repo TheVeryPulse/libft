@@ -70,6 +70,8 @@ FILE_NAMES := \
 SRC_FILES := $(addprefix $(SRC_DIR)/, $(FILE_NAMES))
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(BIN_DIR)/%.o, $(SRC_FILES))
 
+.SILENT:
+
 NAME := $(LIB_DIR)/libft.a
 
 # build object files and archive the static library
@@ -79,6 +81,7 @@ all: $(NAME)
 $(NAME): $(OBJ_FILES)
 	@mkdir -p $(LIB_DIR)
 	ar rcs $@ $^
+	echo "libft done"
 
 # build .o files from .c files
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
