@@ -2,7 +2,7 @@ CC := gcc
 SRC_DIR := ./src
 INC_DIR := ./inc
 LIB_DIR := ./lib
-BIN_DIR := ./bin
+OBJ_DIR := ./build
 
 CFLAGS := -Wall -Wextra -Werror -I $(INC_DIR)
 FILE_NAMES := \
@@ -68,7 +68,7 @@ FILE_NAMES := \
 	\
 	format_string.c
 SRC_FILES := $(addprefix $(SRC_DIR)/, $(FILE_NAMES))
-OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(BIN_DIR)/%.o, $(SRC_FILES))
+OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))
 
 .SILENT:
 
@@ -84,13 +84,13 @@ $(NAME): $(OBJ_FILES)
 	echo "libft done"
 
 # build .o files from .c files
-$(BIN_DIR)/%.o: $(SRC_DIR)/%.c
-	@mkdir -p $(BIN_DIR)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # remove all .o files
 clean:
-	rm -f $(BIN_DIR)/*.o
+	rm -rf $(OBJ_DIR)
 
 # remove static library as well as all .o files
 fclean: clean
