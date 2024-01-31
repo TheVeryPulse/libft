@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   format_string.c                                    :+:      :+:    :+:   */
+/*   ft_format_string.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:51:05 by Philip            #+#    #+#             */
-/*   Updated: 2024/01/14 14:52:16 by Philip           ###   ########.fr       */
+/*   Updated: 2024/01/31 15:51:54 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void		build_format_string(char *f_str, const char *str, size_t len,
  *
  * If memory allocation fails, the function returns NULL. 
  */
-char	*format_string(const char *str, ...)
+char	*ft_format_string(const char *str, ...)
 {
 	size_t	len;
 	va_list	ap;
@@ -102,7 +102,7 @@ static void	build_format_string(char *f_str, const char *str, size_t len,
 {
 	char	*f_str;
 
-	f_str = format_string("%s\n", argv[2]);
+	f_str = ft_format_string("%s\n", argv[2]);
 	ft_printf("%s", f_str);
 	free(f_str);
 } */

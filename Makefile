@@ -66,7 +66,7 @@ FILE_NAMES := \
 	get_next_line.c \
 	get_next_line_utils.c \
 	\
-	format_string.c
+	ft_format_string.c
 SRC_FILES := $(addprefix $(SRC_DIR)/, $(FILE_NAMES))
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))
 
