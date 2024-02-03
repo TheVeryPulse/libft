@@ -77,7 +77,6 @@ static size_t	get_str_count(char const *s, char d)
 static char	*extract_str(char const *s, char c)
 {
 	char	*out_str;
-	size_t	i;
 	size_t	len;
 
 	len = 0;
