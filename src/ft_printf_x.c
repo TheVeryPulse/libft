@@ -6,11 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 18:05:56 by juli              #+#    #+#             */
-/*   Updated: 2024/01/08 17:59:57 by Philip           ###   ########.fr       */
+/*   Updated: 2024/02/03 18:44:23 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ftprintf.h"
 
 #define HEXA_MAX_LEN (9)
 #define HEXA_BASE (16)

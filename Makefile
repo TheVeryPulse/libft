@@ -79,10 +79,13 @@ NAME := $(LIB_DIR)/libft.a
 all: $(NAME)
 
 # build the library with the required .o files
-$(NAME): $(OBJ_FILES)
+$(NAME): msg $(OBJ_FILES)
 	@mkdir -p $(LIB_DIR)
-	ar rcs $@ $^
-	echo "libft done"
+	ar rcs $@ $(OBJ_FILES)
+	@echo "👏 Complete! 👏"
+
+msg:
+	@echo "🚧 Building libft... 🏗️"
 
 # build .o files from .c files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
@@ -103,4 +106,4 @@ re: fclean all
 # compile everything 
 bonus: $(NAME) clean
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re msg

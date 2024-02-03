@@ -6,11 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 21:25:19 by juli              #+#    #+#             */
-/*   Updated: 2024/01/08 17:59:00 by Philip           ###   ########.fr       */
+/*   Updated: 2024/02/03 18:44:16 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ftprintf.h"
 
 /* Interprets the specifier passed into ft_printf.
  * Calls the corresponding function to print the argument.

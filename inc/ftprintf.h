@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ftprintf.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 17:54:43 by Philip            #+#    #+#             */
-/*   Updated: 2024/01/08 17:56:40 by Philip           ###   ########.fr       */
+/*   Updated: 2024/02/03 19:27:58 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FTPRINTF_H
+# define FTPRINTF_H
 # include "libft.h"
 
 int		ft_printf_all(va_list args, int str_i);
