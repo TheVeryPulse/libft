@@ -12,8 +12,14 @@
 
 #include "libft.h"
 
-/*	Description
-	Returns the last node of the list. */
+/**
+ * @brief Returns the last node of the list.
+ * 
+ * @param lst A pointer to the node.
+ * 
+ * @return (t_list*) Returns a pointer to the last node of the list.
+ * If the list is empty, returns NULL.
+ */
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

@@ -12,15 +12,13 @@
 
 #include "libft.h"
 
-/*	Parameters
-	lst: The beginning of the list.
-
-	Return value
-	The length of the list
-
-	Description
-	Counts the number of nodes in a list.
-*/
+/**
+ * @brief Counts the number of nodes in a list.
+ * 
+ * @param lst The beginning of the list.
+ * 
+ * @return (int) The length of the list.
+ */
 int	ft_lstsize(t_list *lst)
 {
 	int	len;

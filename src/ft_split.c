@@ -84,12 +84,7 @@ static char	*extract_str(char const *s, char c)
 	while (s[len] != c && s[len])
 		len++;
 	out_str = (char *)malloc((len + 1) * sizeof(char));
-	i = 0;
-	while (s[i] != c && i < len)
-	{
-		out_str[i] = s[i];
-		i++;
-	}
-	out_str[i] = '\0';
+	ft_memcpy(out_str, s, len);
+	out_str[len] = '\0';
 	return (out_str);
 }

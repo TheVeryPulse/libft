@@ -12,14 +12,13 @@
 
 #include "libft.h"
 
-/*	Parameters
-	lst: The address of a pointer to a node.
-	f: The address of the function used to iterate on the list.
-
-	Description
-	Iterates the list 'lst' and applies the function 'f' on the content of each 
-	node.
-*/
+/**
+ * @brief Iterates the list 'lst' and applies the function 'f' to the content of
+ * each node.
+ * 
+ * @param lst A pointer to the list.
+ * @param f The function used to iterate on the list.
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)
