@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:27:24 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:26:11 by Philip           ###   ########.fr       */
+/*   Updated: 2024/02/03 18:31:56 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i--;
 	}
-	if (s[0] == c)
-		return ((char *)&s[0]);
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
 	return (NULL);
 }
