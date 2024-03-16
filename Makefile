@@ -67,11 +67,12 @@ FILE_NAMES := \
 	get_next_line.c \
 	get_next_line_utils.c \
 	\
-	ft_format_string.c
+	ft_format_string.c \
+	ft_dprintf_part1.c \
+	ft_dprintf_part2.c
+
 SRC_FILES := $(addprefix $(SRC_DIR)/, $(FILE_NAMES))
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))
-
-.SILENT:
 
 NAME := $(LIB_DIR)/libft.a
 
@@ -79,13 +80,10 @@ NAME := $(LIB_DIR)/libft.a
 all: $(NAME)
 
 # build the library with the required .o files
-$(NAME): msg $(OBJ_FILES)
+$(NAME): $(OBJ_FILES)
 	@mkdir -p $(LIB_DIR)
 	ar rcs $@ $(OBJ_FILES)
 	@echo "👏 Complete! 👏"
-
-msg:
-	@echo "🚧 Building libft... 🏗️"
 
 # build .o files from .c files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c

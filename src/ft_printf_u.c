@@ -6,14 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:40:17 by juli              #+#    #+#             */
-/*   Updated: 2024/02/03 18:44:22 by Philip           ###   ########.fr       */
+/*   Updated: 2024/03/16 19:32:38 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftprintf.h"
-
-#define DEC_BASE (10)
-#define DEC_MAX_LEN (12)
 
 /* Prints an unsigned integer to terminal, return string length.
  */

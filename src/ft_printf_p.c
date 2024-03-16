@@ -6,14 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:20:22 by juli              #+#    #+#             */
-/*   Updated: 2024/02/03 18:44:21 by Philip           ###   ########.fr       */
+/*   Updated: 2024/03/16 19:30:09 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftprintf.h"
-
-#define HEXA_BASE (16)
-#define ADDR_MAX_LEN (20)
 
 /* Prints the address of a pointer to terminal in hexadecimal.
  * Returns the length of the printed string.

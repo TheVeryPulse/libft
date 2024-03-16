@@ -6,14 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 18:05:56 by juli              #+#    #+#             */
-/*   Updated: 2024/02/03 18:44:23 by Philip           ###   ########.fr       */
+/*   Updated: 2024/03/16 19:33:33 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftprintf.h"
-
-#define HEXA_MAX_LEN (9)
-#define HEXA_BASE (16)
 
 static void	str_upper(char *s);
 
