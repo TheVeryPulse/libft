@@ -6,14 +6,14 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:39:36 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:38:40 by Philip           ###   ########.fr       */
+/*   Updated: 2024/03/29 17:09:55 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	get_str_count(char const *s, char d);
-static char		*extract_str(char const *s, char c);
+static size_t	count_words(char const *s, char d);
+static char		*duplicate_word(char const *s, char c);
 
 /**
  * @brief Splits a string into an array of strings (words) using a specified
@@ -35,7 +35,7 @@ char	**ft_split(char const *s, char c)
 	size_t	total;
 	char	**strs;
 
-	total = get_str_count(s, c);
+	total = count_words(s, c);
 	strs = (char **)malloc((total + 1) * sizeof(char *));
 	i = 0;
 	j = 0;
@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] != c && s[i])
 		{
-			strs[j] = extract_str(&s[i], c);
+			strs[j] = duplicate_word(&s[i], c);
 			j++;
 		}
 		while (s[i] != c && s[i])
@@ -55,7 +55,7 @@ char	**ft_split(char const *s, char c)
 	return (strs);
 }
 
-static size_t	get_str_count(char const *s, char d)
+static size_t	count_words(char const *s, char d)
 {
 	size_t	i;
 	size_t	sum;
@@ -74,7 +74,7 @@ static size_t	get_str_count(char const *s, char d)
 	return (sum);
 }
 
-static char	*extract_str(char const *s, char c)
+static char	*duplicate_word(char const *s, char c)
 {
 	char	*out_str;
 	size_t	len;

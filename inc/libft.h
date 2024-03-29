@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:03:04 by juli              #+#    #+#             */
-/*   Updated: 2024/03/16 19:57:29 by Philip           ###   ########.fr       */
+/*   Updated: 2024/03/29 17:20:59 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
-# define ASCII_LU_DIFF (32)
 
 /* basic functions */
 
