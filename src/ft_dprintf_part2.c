@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dprintf_format.c                                :+:      :+:    :+:   */
+/*   ft_dprintf_part2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 19:37:00 by Philip            #+#    #+#             */
-/*   Updated: 2024/03/16 19:37:15 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:43:54 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftprintf.h"
+#include <stdbool.h>
+#include <stdint.h>
+#include <unistd.h>
 
 int	ft_dprintf_c(int fd, const char c)
 {

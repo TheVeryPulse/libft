@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:44:18 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:10:00 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:37:20 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,9 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
 
-	node = (t_list *)malloc(sizeof(t_list));
+	node = (t_list *)ft_calloc(1, sizeof(t_list));
 	if (!node)
 		return (NULL);
 	node->content = content;
-	node->next = NULL;
 	return (node);
 }

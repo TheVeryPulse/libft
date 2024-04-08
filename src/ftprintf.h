@@ -6,13 +6,14 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 17:54:43 by Philip            #+#    #+#             */
-/*   Updated: 2024/03/16 19:54:36 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:24:57 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FTPRINTF_H
 # define FTPRINTF_H
 # include "libft.h"
+# include <stdarg.h>
 
 # define HEXA_BASE (16)
 # define HEXA_MAX_LEN (9)

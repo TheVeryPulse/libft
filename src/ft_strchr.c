@@ -6,11 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:33:34 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:17:29 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:31:38 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 /* Returns a pointer to the first occurence of character (c) in the string (s).
 

@@ -6,11 +6,12 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 19:06:56 by juli              #+#    #+#             */
-/*   Updated: 2024/02/03 18:44:24 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:29:58 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftprintf.h"
+#include <stdbool.h>
 
 static bool	is_specifier(char c);
 

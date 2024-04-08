@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:10:50 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:09:33 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:28:04 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		((char *)dest)[0] = ((char *)src)[0];
 	}
 	else
-	{
 		ft_memcpy(dest, src, n);
-	}
 	return (dest);
 }

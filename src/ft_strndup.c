@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 16:52:38 by Philip            #+#    #+#             */
-/*   Updated: 2024/01/31 18:18:34 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:35:56 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strndup(const char *str, size_t n)
 	len = 0;
 	while (len < n && str[len])
 		len++;
-	copy = (char *)malloc((len + 1) * sizeof(char));
+	copy = (char *)ft_calloc(len + 1, sizeof(char));
 	if (copy == NULL)
 		return (NULL);
 	ft_memcpy(copy, str, len);

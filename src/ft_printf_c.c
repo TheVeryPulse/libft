@@ -6,11 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 19:19:43 by Philip Li         #+#    #+#             */
-/*   Updated: 2024/02/03 18:44:18 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:29:05 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include <unistd.h>
 
 /* Prints a character to terminal, return 1 as length of char.
  */

@@ -6,18 +6,13 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:03:04 by juli              #+#    #+#             */
-/*   Updated: 2024/03/29 17:20:59 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:24:34 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdarg.h>
-# include <stdbool.h>
 # include <stddef.h>
-# include <stdint.h>
-# include <stdlib.h>
-# include <unistd.h>
 
 /* basic functions */
 

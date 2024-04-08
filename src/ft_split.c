@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:39:36 by juli              #+#    #+#             */
-/*   Updated: 2024/03/29 17:09:55 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:35:06 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	**ft_split(char const *s, char c)
 	char	**strs;
 
 	total = count_words(s, c);
-	strs = (char **)malloc((total + 1) * sizeof(char *));
+	strs = (char **)ft_calloc(total + 1, sizeof(char *));
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -82,7 +82,7 @@ static char	*duplicate_word(char const *s, char c)
 	len = 0;
 	while (s[len] != c && s[len])
 		len++;
-	out_str = (char *)malloc((len + 1) * sizeof(char));
+	out_str = (char *)ft_calloc(len + 1, sizeof(char));
 	ft_memcpy(out_str, s, len);
 	out_str[len] = '\0';
 	return (out_str);

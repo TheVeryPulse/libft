@@ -6,11 +6,12 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 19:54:22 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:25:00 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:35:42 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /*
  * Applies a given function 'f' to each character of the input 
@@ -30,7 +31,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s)
 		return (NULL);
-	newstr = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	newstr = (char *)ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!newstr)
 		return (NULL);
 	i = 0;

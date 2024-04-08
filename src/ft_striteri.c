@@ -6,11 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 09:27:46 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:22:11 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:31:48 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 /*	Applies the function 'f' on each character of
 	the string passed as argument, passing its index

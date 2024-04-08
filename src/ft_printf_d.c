@@ -6,11 +6,12 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:15:25 by juli              #+#    #+#             */
-/*   Updated: 2024/03/16 19:31:28 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:29:21 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftprintf.h"
+#include <stdbool.h>
 
 /* Prints an integer to terminal, return string length.
  */

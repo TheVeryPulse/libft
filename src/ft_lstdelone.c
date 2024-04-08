@@ -6,11 +6,12 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:36:51 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:10:07 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:27:21 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /**
  * @brief Frees the memory of a node's content using the function 'del', then

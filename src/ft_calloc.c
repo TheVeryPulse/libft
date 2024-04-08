@@ -6,11 +6,12 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:37:50 by Philip            #+#    #+#             */
-/*   Updated: 2024/01/17 12:37:51 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:33:15 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /**
  * @brief

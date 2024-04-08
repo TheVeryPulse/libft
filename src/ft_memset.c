@@ -6,11 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:00:21 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:10:24 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:28:17 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 /**
  * @brief Fills the first 'n' bytes of the memory area pointed to by 's' with 

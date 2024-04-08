@@ -6,11 +6,11 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:53:12 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:24:26 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:32:07 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {

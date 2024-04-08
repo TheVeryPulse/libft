@@ -6,11 +6,13 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 01:23:06 by juli              #+#    #+#             */
-/*   Updated: 2024/01/08 18:09:18 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:43:37 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 /* Attempts to free each node of the entire list and the provided buffer.
    Then resets the pointer to NULL after.

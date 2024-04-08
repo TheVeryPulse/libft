@@ -6,11 +6,12 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:51:05 by Philip            #+#    #+#             */
-/*   Updated: 2024/01/31 15:51:54 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:26:20 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdarg.h>
 
 static size_t	format_strlen(const char *s, va_list ap_copy);
 static void		build_format_string(char *f_str, const char *str, size_t len,

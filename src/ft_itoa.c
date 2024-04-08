@@ -6,11 +6,12 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:40:23 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:07:46 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:26:55 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdbool.h>
 
 #define INT_MAX_LEN (40)
 #define DEC_BASE (10)

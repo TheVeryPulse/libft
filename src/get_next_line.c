@@ -6,11 +6,12 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 19:57:59 by Philip Li         #+#    #+#             */
-/*   Updated: 2024/01/08 18:09:08 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:43:03 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdlib.h>
 
 /* Reads a line from a file descriptor and returns the line.
 

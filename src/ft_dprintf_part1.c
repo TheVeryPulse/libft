@@ -6,12 +6,13 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 19:16:02 by Philip            #+#    #+#             */
-/*   Updated: 2024/03/16 20:48:23 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/08 16:25:49 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ftprintf.h"
+#include <stdbool.h>
 
 static bool	is_specifier(char c);
 static void	str_upper(char *s);
