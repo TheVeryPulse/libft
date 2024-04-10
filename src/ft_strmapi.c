@@ -6,23 +6,23 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 19:54:22 by juli              #+#    #+#             */
-/*   Updated: 2024/04/08 16:35:42 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/10 11:37:30 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-/*
- * Applies a given function 'f' to each character of the input 
- * string 's'.
- * Each character is passed by its index as the first argument to 'f'.
- * A new string is created, where each character is the result of the function 
- * 'f'.
+/**
+ * @brief Applies the function `f` to each character of the string `s`, passing
+ *        its index as the first argument and the character itself as the 
+ *        second. A new string is created (using malloc(3)) to collect the
+ *        results from the successive applications of f.
  * 
- * If the input string 's' is NULL, the function returns NULL.
- * If memory allocation for the new string fails, the function also returns NULL.
- * The new string is null-terminated and returned by the function.
+ * @param s The string on which to iterate.
+ * @param f The function to apply to each character
+ * @return  The string created from the successive applications of `f`.
+            Returns NULL if the allocation fails.
  */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

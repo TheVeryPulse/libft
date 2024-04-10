@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:56:09 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:26:18 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/10 11:30:37 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 
 static size_t	get_len(char const *s1, char const *set);
 
+/**
+ * @brief Allocates (with malloc(3)) and returns a copy of 's1' with the 
+ *        characters specified in ’set’ removed from the beginning and the end 
+ *        of the string.
+ * 
+ * @param s1 The string to be trimmed.
+ * @param set The reference set of characters to trim.
+ * @return The trimmed string. NULL if the allocation fails.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

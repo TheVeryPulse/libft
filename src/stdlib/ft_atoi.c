@@ -6,14 +6,14 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:42:04 by juli              #+#    #+#             */
-/*   Updated: 2024/01/15 00:06:59 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/10 11:32:52 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#define POSITIVE (+1)
-#define NEGATIVE (-1)
-#define BASE_TEN (10)
+#define POSITIVE +1
+#define NEGATIVE -1
+#define BASE_TEN 10
 
 static int	num(char c);
 

@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:03:04 by juli              #+#    #+#             */
-/*   Updated: 2024/04/08 16:24:34 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/10 11:32:53 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,10 @@ int		ft_printf(const char *str, ...);
 /* get_next_line */
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE (16)
+#  define BUFFER_SIZE 16
 # endif
 # ifndef FD_MAX
-#  define FD_MAX (4096)
+#  define FD_MAX 4096
 # endif
 
 char	*get_next_line(int fd);

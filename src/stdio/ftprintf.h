@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 17:54:43 by Philip            #+#    #+#             */
-/*   Updated: 2024/04/08 16:24:57 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/10 11:32:52 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 # include "libft.h"
 # include <stdarg.h>
 
-# define HEXA_BASE (16)
-# define HEXA_MAX_LEN (9)
-# define ADDR_MAX_LEN (20)
+# define HEXA_BASE 16
+# define HEXA_MAX_LEN 9
+# define ADDR_MAX_LEN 20
 
-# define DEC_BASE (10)
-# define DEC_MAX_LEN (16)
+# define DEC_BASE 10
+# define DEC_MAX_LEN 16
 
 /* ft_printf */
 

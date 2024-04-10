@@ -6,16 +6,23 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:40:23 by juli              #+#    #+#             */
-/*   Updated: 2024/04/08 16:26:55 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/10 11:34:55 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdbool.h>
 
-#define INT_MAX_LEN (40)
-#define DEC_BASE (10)
+#define INT_MAX_LEN 40
+#define DEC_BASE 10
 
+/**
+ * @brief Allocates (with malloc(3)) and returns a string representing the 
+ *        integer received as an argument.
+ * 
+ * @param n the integer to convert.
+ * @return The string representing the integer. NULL if the allocation fails.
+ */
 char	*ft_itoa(int n)
 {
 	int			i;
