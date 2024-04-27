@@ -6,13 +6,14 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:51:05 by Philip            #+#    #+#             */
-/*   Updated: 2024/04/27 17:57:29 by Philip           ###   ########.fr       */
+/*   Updated: 2024/04/27 18:09:26 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_format_string.h"
 #include "libft.h"
 #include <stdarg.h>
+#include <stdlib.h>
 
 extern char	*ft_format_string(const char *str, ...);
 static char	*build_format_string(t_list *strings);
@@ -34,12 +35,15 @@ extern char	*ft_format_string(const char *str, ...)
 {
 	va_list	ap;
 	t_list	*strings;
+	char	*formatted_string;
 
 	strings = NULL;
 	va_start(ap, str);
 	add_args(&strings, str, ap);
 	va_end(ap);
-	return (build_format_string(strings));
+	formatted_string = build_format_string(strings);
+	ft_lstclear(&strings, &free);
+	return (formatted_string);
 }
 
 static char	*build_format_string(t_list *strings)
