@@ -4,97 +4,75 @@ INC_DIR := ./inc
 LIB_DIR := ./lib
 OBJ_DIR := ./build
 
-CFLAGS := -Wall -Wextra -Werror -I $(INC_DIR)
+CFLAGS := -Wall -Wextra -Werror -I $(INC_DIR) -g
 
-CTYPE_FILES := \
-	ft_isalnum.c \
-	ft_isalpha.c \
-	ft_isascii.c \
-	ft_isdigit.c \
-	ft_islower.c \
-	ft_isprint.c \
-	ft_isspace.c \
-	ft_isupper.c \
-	ft_isxdigit.c
+FILES := \
+	src/ctype/ft_isalnum.c \
+	src/ctype/ft_isalpha.c \
+	src/ctype/ft_isascii.c \
+	src/ctype/ft_isdigit.c \
+	src/ctype/ft_islower.c \
+	src/ctype/ft_isprint.c \
+	src/ctype/ft_isspace.c \
+	src/ctype/ft_isupper.c \
+	src/ctype/ft_isxdigit.c \
+	src/ft_format_string_add_args.c \
+	src/ft_format_string.c \
+	src/ft_itoa.c \
+	src/ft_putchar_fd.c \
+	src/ft_putendl_fd.c \
+	src/ft_putnbr_fd.c \
+	src/ft_putstr_fd.c \
+	src/ft_split.c \
+	src/ft_striteri.c \
+	src/ft_strjoin.c \
+	src/ft_strmapi.c \
+	src/ft_strtrim.c \
+	src/ft_substr.c \
+	src/get_next_line.c \
+	src/get_next_line_utils.c \
+	src/linked_list/ft_lstadd_back.c \
+	src/linked_list/ft_lstadd_front.c \
+	src/linked_list/ft_lstclear.c \
+	src/linked_list/ft_lstdelone.c \
+	src/linked_list/ft_lstiter.c \
+	src/linked_list/ft_lstlast.c \
+	src/linked_list/ft_lstmap.c \
+	src/linked_list/ft_lstnew.c \
+	src/linked_list/ft_lstsize.c \
+	src/linked_list/ft_lst_test.c \
+	src/stdio/ft_dprintf_part1.c \
+	src/stdio/ft_dprintf_part2.c \
+	src/stdio/ft_printf_all.c \
+	src/stdio/ft_printf.c \
+	src/stdio/ft_printf_c.c \
+	src/stdio/ft_printf_d.c \
+	src/stdio/ft_printf_p.c \
+	src/stdio/ft_printf_s.c \
+	src/stdio/ft_printf_u.c \
+	src/stdio/ft_printf_x.c \
+	src/stdlib/ft_abs.c \
+	src/stdlib/ft_atoi.c \
+	src/stdlib/ft_calloc.c \
+	src/string/ft_bzero.c \
+	src/string/ft_memchr.c \
+	src/string/ft_memcmp.c \
+	src/string/ft_memcpy.c \
+	src/string/ft_memmove.c \
+	src/string/ft_memset.c \
+	src/string/ft_strchr.c \
+	src/string/ft_strdup.c \
+	src/string/ft_strlcat.c \
+	src/string/ft_strlcpy.c \
+	src/string/ft_strlen.c \
+	src/string/ft_strncmp.c \
+	src/string/ft_strndup.c \
+	src/string/ft_strnstr.c \
+	src/string/ft_strrchr.c \
+	src/string/ft_tolower.c \
+	src/string/ft_toupper.c
 
-LINKED_LIST_FILES := \
-	ft_lstadd_back.c \
-	ft_lstadd_front.c \
-	ft_lstclear.c \
-	ft_lstdelone.c \
-	ft_lstiter.c \
-	ft_lstlast.c \
-	ft_lstmap.c \
-	ft_lstnew.c \
-	ft_lstsize.c
-
-STDIO_FILES:= \
-	ft_dprintf_part1.c \
-	ft_dprintf_part2.c \
-	ft_printf.c \
-	ft_printf_all.c \
-	ft_printf_c.c \
-	ft_printf_s.c \
-	ft_printf_p.c \
-	ft_printf_d.c \
-	ft_printf_u.c \
-	ft_printf_x.c
-
-STDLIB_FILES := \
-	ft_abs.c \
-	ft_atoi.c \
-	ft_calloc.c
-
-STRING_FILES := \
-	ft_bzero.c \
-	ft_memchr.c \
-	ft_memcmp.c \
-	ft_memcpy.c \
-	ft_memmove.c \
-	ft_memset.c \
-	ft_strchr.c \
-	ft_strdup.c \
-	ft_strlcat.c \
-	ft_strlcpy.c \
-	ft_strlen.c \
-	ft_strncmp.c \
-	ft_strndup.c \
-	ft_strnstr.c \
-	ft_strrchr.c \
-	ft_tolower.c \
-	ft_toupper.c
-
-CTYPE_FILES := $(addprefix ctype/, $(CTYPE_FILES))
-LINKED_LIST_FILES := $(addprefix linked_list/, $(LINKED_LIST_FILES))
-STDIO_FILES := $(addprefix stdio/, $(STDIO_FILES))
-STDLIB_FILES := $(addprefix stdlib/, $(STDLIB_FILES))
-STRING_FILES := $(addprefix string/, $(STRING_FILES))
-
-FILE_NAMES := \
-	$(CTYPE_FILES) \
-	$(LINKED_LIST_FILES) \
-	$(STDIO_FILES) \
-	$(STDLIB_FILES) \
-	$(STRING_FILES) \
-	ft_itoa.c \
-	ft_putchar_fd.c \
-	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
-	ft_putstr_fd.c \
-	ft_split.c \
-	ft_striteri.c \
-	ft_strjoin.c \
-	ft_strmapi.c \
-	ft_strtrim.c \
-	ft_substr.c \
-	\
-	get_next_line.c \
-	get_next_line_utils.c \
-	\
-	ft_format_string.c
-
-SRC_FILES := $(addprefix $(SRC_DIR)/, $(FILE_NAMES))
-OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))
+OFILES := $(patsubst src/%.c, build/%.o, $(FILES))
 
 NAME := $(LIB_DIR)/libft.a
 
@@ -102,15 +80,16 @@ NAME := $(LIB_DIR)/libft.a
 all: $(NAME)
 
 # build the library with the required .o files
-$(NAME): $(OBJ_FILES)
+$(NAME): $(OFILES)
 	@mkdir -p $(@D)
-	ar rcs $@ $(OBJ_FILES)
-	@echo "👏 Libft Complete! 👏"
+	@ar rcs $@ $(OFILES)
+	@echo "\033[0;32m$@\nDONE\033[0m"
 
 # build .o files from .c files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "\033[0;32m* $^\033[0m"
 
 # remove all .o files
 clean:
