@@ -83,7 +83,7 @@ all: $(NAME)
 $(NAME): $(OFILES)
 	@mkdir -p $(@D)
 	@ar rcs $@ $(OFILES)
-	@echo "\033[0;32m$@\nDONE\033[0m"
+	@echo "\033[0;32m\n>>> $@\n\033[0m"
 
 # build .o files from .c files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
