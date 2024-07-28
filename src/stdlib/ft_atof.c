@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 14:43:09 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/28 17:21:36 by Philip           ###   ########.fr       */
+/*   Updated: 2024/07/28 17:35:16 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 #include <stdio.h>
 #include <math.h>
 #include <limits.h>
+
+extern double	ft_atof(const char *str);
+static void		sign_mgt(const char **str, t_atof_vars *vars);
+static void		process_fraction_part(const char **str, t_atof_vars *vars);
+static void		process_exponent_part(const char **str, t_atof_vars *vars);
 
 /*
 The string "-1.23e42" represents a floating-point number in 
@@ -30,6 +35,42 @@ ten to the power of -4, it would be written as "-1.23e-4"
 -1.230000000000000e-04
 -0.000123
 */
+
+double	ft_atof(const char *str)
+{
+	t_atof_vars	vars;
+
+	vars.result = 0.0;
+	vars.exponent = 0;
+	vars.sign = 1.0;
+	vars.exponent_sign = 1;
+	vars.fraction = 0.1;
+	sign_mgt(&str, &vars);
+	while (ft_isdigit(*str))
+	{
+		vars.result = vars.result * 10.0 + (*str - '0');
+		++str;
+	}
+	if (*str == '.')
+		process_fraction_part(&str, &vars);
+	if (*str == 'e' || *str == 'E')
+		process_exponent_part(&str, &vars);
+	vars.result *= pow(10.0, vars.exponent_sign * vars.exponent);
+	return (vars.sign * vars.result);
+}
+
+static void	sign_mgt(const char **str, t_atof_vars *vars)
+{
+	while ((**str >= '\t' && **str <= '\r') || **str == ' ')
+		(*str)++;
+	if (**str == '-')
+	{
+		vars->sign = -1.0;
+		(*str)++;
+	}
+	else if (**str == '+')
+		(*str)++;
+}
 
 static void	process_fraction_part(const char **str, t_atof_vars *vars)
 {
@@ -72,40 +113,4 @@ static void	process_exponent_part(const char **str, t_atof_vars *vars)
 		vars->exponent = vars->exponent * 10 + (**str - '0');
 		(*str)++;
 	}
-}
-
-static void	sign_mgt(const char **str, t_atof_vars *vars)
-{
-	while ((**str >= '\t' && **str <= '\r') || **str == ' ')
-		(*str)++;
-	if (**str == '-')
-	{
-		vars->sign = -1.0;
-		(*str)++;
-	}
-	else if (**str == '+')
-		(*str)++;
-}
-
-double	ft_atof(const char *str)
-{
-	t_atof_vars	vars;
-
-	vars.result = 0.0;
-	vars.exponent = 0;
-	vars.sign = 1.0;
-	vars.exponent_sign = 1;
-	vars.fraction = 0.1;
-	sign_mgt(&str, &vars);
-	while (ft_isdigit(*str))
-	{
-		vars.result = vars.result * 10.0 + (*str - '0');
-		++str;
-	}
-	if (*str == '.')
-		process_fraction_part(&str, &vars);
-	if (*str == 'e' || *str == 'E')
-		process_exponent_part(&str, &vars);
-	vars.result *= pow(10.0, vars.exponent_sign * vars.exponent);
-	return (vars.sign * vars.result);
 }
