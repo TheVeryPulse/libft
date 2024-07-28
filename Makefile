@@ -52,6 +52,7 @@ FILES := \
 	src/stdio/ft_printf_u.c \
 	src/stdio/ft_printf_x.c \
 	src/stdlib/ft_abs.c \
+	src/stdlib/ft_atof.c \
 	src/stdlib/ft_atoi.c \
 	src/stdlib/ft_calloc.c \
 	src/string/ft_bzero.c \

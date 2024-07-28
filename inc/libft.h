@@ -6,7 +6,7 @@
 /*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:03:04 by juli              #+#    #+#             */
-/*   Updated: 2024/04/10 11:32:53 by Philip           ###   ########.fr       */
+/*   Updated: 2024/07/28 17:25:47 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ char	*get_next_line(int fd);
 int		ft_abs(int n);
 char	*ft_format_string(const char *str, ...);
 int		ft_dprintf(int fd, const char *str, ...);
+double	ft_atof(const char *str);
 
 #endif

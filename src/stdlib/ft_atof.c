@@ -3,13 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Philip <juli@student.42london.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 14:43:09 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/28 17:11:17 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/28 17:21:36 by Philip           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "t_atof_vars.h"
+#include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -29,21 +31,7 @@ ten to the power of -4, it would be written as "-1.23e-4"
 -0.000123
 */
 
-int	ft_isdigit(int c)
-{
-	return (c >= '0' && c <= '9');
-}
-
-typedef struct s_atof_vars
-{
-	double	result; //0.0
-	int		exponent; //0
-	double	sign; //1.0
-	int		exponent_sign; //1
-	double	fraction; //0.1
-}	t_atof_vars;
-
-void	process_fraction_part(const char **str, t_atof_vars *vars)
+static void	process_fraction_part(const char **str, t_atof_vars *vars)
 {
 	double	digit;
 
@@ -63,7 +51,7 @@ void	process_fraction_part(const char **str, t_atof_vars *vars)
 	}
 }
 
-void	process_exponent_part(const char **str, t_atof_vars *vars)
+static void	process_exponent_part(const char **str, t_atof_vars *vars)
 {
 	(*str)++;
 	if (**str == '-')
@@ -86,7 +74,7 @@ void	process_exponent_part(const char **str, t_atof_vars *vars)
 	}
 }
 
-void	sign_mgt(const char **str, t_atof_vars *vars)
+static void	sign_mgt(const char **str, t_atof_vars *vars)
 {
 	while ((**str >= '\t' && **str <= '\r') || **str == ' ')
 		(*str)++;
@@ -111,8 +99,8 @@ double	ft_atof(const char *str)
 	sign_mgt(&str, &vars);
 	while (ft_isdigit(*str))
 	{
-		vars.result = vars.result * 10.0 +(*str - '0');
-		str++;
+		vars.result = vars.result * 10.0 + (*str - '0');
+		++str;
 	}
 	if (*str == '.')
 		process_fraction_part(&str, &vars);
@@ -121,19 +109,3 @@ double	ft_atof(const char *str)
 	vars.result *= pow(10.0, vars.exponent_sign * vars.exponent);
 	return (vars.sign * vars.result);
 }
-
-
-int main(void)
-{
-	double  atof_res;
-	double  ft_atof_res;
-	
-	//const char *arry = "-1.23e42    342342341";
-	const char *arry = "-1.23e42";
-	ft_atof_res = ft_atof(arry);
-	atof_res = atof(arry);
-	printf("ft_atof:: Result: %f\n", ft_atof_res);
-	printf("atof:: Result   : %f\n", atof_res);
-	return (0);
-}
-
