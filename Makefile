@@ -4,7 +4,7 @@ INC_DIR := ./inc
 LIB_DIR := ./lib
 OBJ_DIR := ./build
 
-CFLAGS := -Wall -Wextra -Werror -I $(INC_DIR) -g
+CFLAGS := -Wall -Wextra -Werror -I $(INC_DIR) -MMD -MP
 
 FILES := \
 	src/ctype/ft_isalnum.c \
@@ -75,6 +75,8 @@ FILES := \
 
 OFILES := $(patsubst src/%.c, build/%.o, $(FILES))
 
+DEPS := $(patsubst build/%.o, build/%.d, $(OFILES))
+
 NAME := $(LIB_DIR)/libft.a
 
 # build object files and archive the static library
@@ -91,6 +93,9 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "\033[0;32m* $^\033[0m"
+
+# Include the dependency files
+-include $(DEPS)
 
 # remove all .o files
 clean:
