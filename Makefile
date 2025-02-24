@@ -1,7 +1,6 @@
 CC := gcc
 SRC_DIR := ./src
 INC_DIR := ./inc
-LIB_DIR := ./lib
 OBJ_DIR := ./build
 
 CFLAGS := -Wall -Wextra -Werror -I $(INC_DIR) -MMD -MP
@@ -77,7 +76,7 @@ OFILES := $(patsubst src/%.c, build/%.o, $(FILES))
 
 DEPS := $(patsubst build/%.o, build/%.d, $(OFILES))
 
-NAME := $(LIB_DIR)/libft.a
+NAME := libft.a
 
 # build object files and archive the static library
 all: $(NAME)
